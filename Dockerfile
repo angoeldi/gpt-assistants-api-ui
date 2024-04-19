@@ -13,9 +13,8 @@ RUN poetry lock --no-update
 RUN poetry install
 
 EXPOSE 7888
-EXPOSE 8501
 
 COPY . /app
 
 ENTRYPOINT ["streamlit", "run"]
-CMD ["app.py"]
+CMD ["app.py", "--server.port", "7888"]
