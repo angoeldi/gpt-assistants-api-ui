@@ -10,6 +10,18 @@ from openai.types.beta.threads import MessageContentImageFile
 from tools import TOOL_MAP
 
 
+def load_env_variables(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line and not line.startswith('#'):  # Skip blank lines and comments
+                key, value = line.split('=', 1)
+                os.environ[key] = value.strip()
+
+# Specify the path to your .env file
+env_file_path = '.env'
+load_env_variables(env_file_path)
+
 azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
 azure_openai_key = os.environ.get("AZURE_OPENAI_KEY")
 openai_api_key = os.environ.get("OPENAI_API_KEY")
