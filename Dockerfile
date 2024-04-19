@@ -13,7 +13,7 @@ RUN poetry lock --no-update
 RUN poetry install
 
 EXPOSE 7888
-EXPOSE 8051
+EXPOSE 8501
 
 COPY . /app
 
