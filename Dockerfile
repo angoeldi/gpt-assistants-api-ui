@@ -12,7 +12,7 @@ RUN poetry config virtualenvs.create false
 RUN poetry lock --no-update
 RUN poetry install
 
-EXPOSE 8501
+EXPOSE 7888
 
 COPY . /app
 
