@@ -7,4 +7,4 @@ services:
     env_file: .env
     ports:
       - "7888:8501"
-      - "8501:8501"
+    network_mode: "host"
