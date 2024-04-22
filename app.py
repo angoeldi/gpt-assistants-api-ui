@@ -20,7 +20,7 @@ def load_env_variables(file_path):
 
 # Specify the path to your .env file
 env_file_path = '.env'
-load_env_variables(env_file_path)
+# load_env_variables(env_file_path)
 
 azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
 azure_openai_key = os.environ.get("AZURE_OPENAI_KEY")
